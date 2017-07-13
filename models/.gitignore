@@ -3,3 +3,4 @@ SVM/*
 *.prototxt
 *.caffemodel
 h5/*
+*.lua
