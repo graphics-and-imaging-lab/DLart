@@ -2,6 +2,7 @@
 require 'cutorch';
 require 'cudnn';
 require 'cunn';
+require 'loadcaffe';
 
 --------------------------------------------------------------------------------
 -- MAIN ------------------------------------------------------------------------
@@ -22,7 +23,7 @@ local function main()
   print ("========> Loading")
   -- load the model
   if opt.net == "vgg19" then
-    require 'loadcaffe';
+
     opt.exp = false
     cnn = loadcaffe.load(proto_file, model_file, 'cudnn');
     print ("========> Using optimized VGG19")
@@ -96,9 +97,7 @@ local function main()
     --       features .. " " ..
     --       predictions .. " " ..
     --     1)
-    --     if opt.print_output then
-    --       printResults("temp/paths.txt", predictions, groundt, opt.name)
-    --     end
+
     --   else
     --     print ("========> Classifying the images contained in the folder ".. opt.name)
     --     HDF5prediction("temp/paths.txt", cnn, predictions, nclasses, opt.batch, opt.exp)
@@ -171,7 +170,6 @@ local function main()
     end
 
     -- If the images have not been predicted yet we predict them
-    print (opt.svm)
     if not opt.svm then
       -- if not isFile(predictions .. '.h5') and not use_imagenet then
       -- HDF5prediction(paths ..'.txt', cnn, predictions .. '.h5', nclasses, opt.batch, opt.exp);
@@ -228,7 +226,6 @@ local function main()
   -- end
 
   --VAL
-  print "inin"
 
   if (opt.out == "") then
     if opt.svm then out = '../data/results/' .. "_svm_" .. opt.net .."_" .. opt.name.. opt.test .. "_test_" .. opt.net .. "_"
@@ -245,7 +242,6 @@ local function main()
     getMeasures(paths .. '_train.txt', predictions .. '_train.h5', out, groundt, use_imagenet);
   end
 end
-
 
 -- Option to extract the paths of a given dataset
 if opt.option == "path" then
