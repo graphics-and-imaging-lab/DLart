@@ -1,0 +1,5 @@
+SVM/*
+*.t7
+*.prototxt
+*.caffemodel
+h5/*
