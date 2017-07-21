@@ -63,10 +63,14 @@ Details about the method used can be found in the following paper: [paper](http:
 
 If you find it useful for your research please cite:
 ```
-@inproceedings{lagunas2017transfer,
-               title={Transfer Learning for Illustration Classification},
-               author={Lagunas, Manuel and Garces, Elena},
-               booktitle={CEIG},
-               year={2017}
+@inproceedings {ceig.20171213,
+    booktitle = {Spanish Computer Graphics Conference (CEIG)},
+    title = {{Transfer Learning for Illustration Classification}},
+    author = {Lagunas, Manuel and Garces, Elena},
+    year = {2017},
+    publisher = {The Eurographics Association},
+    ISSN = {-},
+    ISBN = {978-3-03868-046-8},
+    DOI = {10.2312/ceig.20171213}
 }
 ```
