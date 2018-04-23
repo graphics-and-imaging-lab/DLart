@@ -74,3 +74,5 @@ If you find it useful for your research please cite:
     DOI = {10.2312/ceig.20171213}
 }
 ```
+
+This software is published for academic and non-commercial use only.
